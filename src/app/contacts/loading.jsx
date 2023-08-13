@@ -3,7 +3,7 @@
 import React from "react";
 
 const loading = () => {
-  return <div>loading....</div>;
+  return <span className="loading"></span>;
 };
 
 export default loading;

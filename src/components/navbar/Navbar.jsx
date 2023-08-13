@@ -1,5 +1,4 @@
 /** @format */
-
 import Link from "next/link";
 
 const links = [
@@ -13,15 +12,18 @@ const links = [
 
 const Navbar = () => {
   return (
-    <>
-      <div className="flex gap-6">
+    <nav className="flex justify-between items-center text-white bg-slate-500 px-10 h-24">
+      <div className="text-5xl">
+        <Link href="/">NextRush</Link>
+      </div>
+      <div className="hidden md:flex gap-6">
         {links.map((link) => (
           <Link key={link.id} href={link.url}>
             {link.title}
           </Link>
         ))}
       </div>
-    </>
+    </nav>
   );
 };
 
