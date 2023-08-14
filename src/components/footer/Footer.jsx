@@ -2,7 +2,7 @@
 
 const Footer = () => {
   return (
-    <footer className="footer p-10 bg-base-200 text-base-content">
+    <footer className="footer p-10">
       <div>
         <span className="footer-title">Services</span>
         <a className="link link-hover">Branding</a>
@@ -35,7 +35,7 @@ const Footer = () => {
               placeholder="username@site.com"
               className="input input-bordered w-full pr-16"
             />
-            <button className="btn btn-primary absolute top-0 right-0 rounded-l-none">
+            <button className="btn btn-neutral absolute top-0 right-0 rounded-l-none">
               Subscribe
             </button>
           </div>

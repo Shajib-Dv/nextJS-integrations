@@ -4,7 +4,7 @@ import Image from "next/image";
 import img from "/public/images/rectangle4.png";
 const BlogPost = () => {
   return (
-    <div className="md:flex items-center gap-10 bg-base-200 rounded-md shadow-2xl p-6">
+    <div className="md:flex items-center gap-10  rounded-md shadow-2xl p-6">
       <div className="md:w-60 h-auto rounded-md object-cover">
         <Image
           src={img}

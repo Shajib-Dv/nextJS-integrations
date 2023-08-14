@@ -4,12 +4,12 @@ import Image from "next/image";
 import contactImg from "../../../public/images/lawyer-2.jpg";
 const contacts = () => {
   return (
-    <div className="hero min-h-screen bg-base-100">
+    <div className="hero min-h-screen">
       <div className="hero-content flex-col gap-10 lg:flex-row">
         <div className="flex-1">
           <Image src={contactImg} alt="banner" className="rounded-md" />
         </div>
-        <div className="card flex-1 shadow-2xl bg-base-100">
+        <div className="card flex-1 shadow-2xl ">
           <div className="card-body">
             <div className="form-control">
               <label className="label">
@@ -43,7 +43,7 @@ const contacts = () => {
               ></textarea>
             </div>
             <div className="form-control mt-6">
-              <button className="btn btn-primary">Send</button>
+              <button className="btn btn-neutral bg-green-700">Send</button>
             </div>
           </div>
         </div>

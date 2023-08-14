@@ -3,7 +3,7 @@ import Image from "next/image";
 import banner from "/public/images/question.png";
 export default function Home() {
   return (
-    <div className="hero min-h-screen bg-base-200">
+    <div className="hero min-h-screen">
       <div className="hero-content flex-col gap-10 lg:flex-row-reverse">
         <div className="flex-1">
           <Image src={banner} alt="banner" className="md:w-4/5 img-ping" />
@@ -15,7 +15,7 @@ export default function Home() {
             excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
             a id nisi.
           </p>
-          <button className="btn btn-primary">Get Started</button>
+          <button className="btn btn-neutral">Get Started</button>
         </div>
       </div>
     </div>

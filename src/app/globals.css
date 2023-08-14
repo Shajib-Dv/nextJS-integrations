@@ -17,3 +17,22 @@
     transform: scale(1.02);
   }
 }
+
+.input {
+  @apply bg-transparent text-current placeholder:text-current;
+}
+.label-text {
+  @apply text-current;
+}
+
+.theme {
+  transition: 2s all ease;
+}
+.dark,
+body {
+  @apply bg-base-100 text-white;
+}
+.light,
+body {
+  @apply bg-white text-black;
+}

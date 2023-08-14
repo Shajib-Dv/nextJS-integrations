@@ -1,5 +1,7 @@
 /** @format */
+
 import Link from "next/link";
+import ThemeChanger from "../themeChanger/ThemeChanger";
 
 const links = [
   { id: 1, title: "Home", url: "/" },
@@ -12,13 +14,16 @@ const links = [
 
 const Navbar = () => {
   return (
-    <nav className="flex justify-between items-center text-white bg-slate-500 px-10 h-24">
+    <nav className="flex justify-between items-center text-white bg-[rgb(0,0,0,0.5)] px-10 h-24">
       <div className="text-5xl">
-        <Link href="/">NextRush</Link>
+        <Link href="/" className="text-green-800">
+          NextRush
+        </Link>
       </div>
       <div className="hidden md:flex gap-6">
+        <ThemeChanger />
         {links.map((link) => (
-          <Link key={link.id} href={link.url}>
+          <Link key={link.id} href={link.url} className="hover:text-green-700">
             {link.title}
           </Link>
         ))}
