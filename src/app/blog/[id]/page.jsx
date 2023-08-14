@@ -3,19 +3,30 @@
 import Image from "next/image";
 import img from "/public/images/lawyer-3.jpg";
 import avatar from "/public/images/haturi.png";
+import { notFound } from "next/navigation";
 
-const blogPost = ({ params }) => {
+async function getData(id) {
+  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
+    cache: "no-store",
+  });
+
+  if (!res.ok) {
+    return notFound();
+  }
+
+  return res.json();
+}
+
+const blogPost = async ({ params }) => {
+  const data = await getData(params?.id);
+
   return (
     <div className="md:p-20 p-4">
       <div className="flex md:flex-row flex-col-reverse items-center gap-10 mb-10">
         <div className="flex-1 p-4">
           <div className="space-y-8">
-            <h2 className="text-4xl font-bold">Hot news from {params?.id}</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-              nemo cumque earum libero cum laudantium numquam repellendus
-              deserunt vero magni.
-            </p>
+            <h2 className="text-4xl font-bold">{data?.title}</h2>
+            <p>{data?.body}</p>
           </div>
           <div className="flex items-center gap-10 mt-10">
             <Image

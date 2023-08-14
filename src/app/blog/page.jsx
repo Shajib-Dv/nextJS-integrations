@@ -1,21 +1,30 @@
 /** @format */
 
-import Image from "next/image";
-import img1 from "/public/images/haturi.png";
 import BlogPost from "@/components/blogPost/BlogPost";
 import Link from "next/link";
-const blog = () => {
+
+async function getData() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
+    cache: "no-store",
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  return res.json();
+}
+
+const blog = async () => {
+  const data = await getData();
   return (
     <div className="grid grid-cols-1 gap-10 md:p-20">
-      <Link href="/blog/blog1">
-        <BlogPost />
-      </Link>
-      <Link href="/blog/blog2">
-        <BlogPost />
-      </Link>
-      <Link href="/blog/blog3">
-        <BlogPost />
-      </Link>
+      {data &&
+        data.map((item) => (
+          <Link key={item.id} href={`/blog/${item.id}`}>
+            <BlogPost title={item?.title} />
+          </Link>
+        ))}
     </div>
   );
 };

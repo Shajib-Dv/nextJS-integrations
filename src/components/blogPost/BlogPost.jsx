@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import img from "/public/images/rectangle4.png";
-const BlogPost = () => {
+const BlogPost = ({ title }) => {
   return (
     <div className="md:flex items-center gap-10  rounded-md shadow-2xl p-6">
       <div className="md:w-60 h-auto rounded-md object-cover">
@@ -13,7 +13,7 @@ const BlogPost = () => {
         />
       </div>
       <div className="w-full space-y-6">
-        <h2 className="text-4xl font-bold">Explore the news today</h2>
+        <h2 className="text-4xl font-bold">{title}</h2>
         <p className=" text-justify">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate
           id, aliquid neque ipsum aliquam ea enim quasi reiciendis repellat

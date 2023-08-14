@@ -17,6 +17,7 @@ const ThemeChanger = () => {
       </span>
       <input
         type="checkbox"
+        onChange={() => ""}
         className="toggle toggle-primary "
         checked={theme === "dark" ? false : true}
       />
