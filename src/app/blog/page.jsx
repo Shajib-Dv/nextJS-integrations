@@ -1,26 +1,21 @@
 /** @format */
 
 import BlogPost from "@/components/blogPost/BlogPost";
+import loadBlogs from "@/utils/loadBlogs";
 import Link from "next/link";
 
-async function getData() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
-    cache: "no-store",
-  });
-
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
-
-  return res.json();
-}
+export const metadata = () => {
+  return {
+    title: "NextRush | blogs",
+  };
+};
 
 const blog = async () => {
-  const data = await getData();
+  const blogs = await loadBlogs();
   return (
     <div className="grid grid-cols-1 gap-10 md:p-20">
-      {data &&
-        data.map((item) => (
+      {blogs &&
+        blogs.map((item) => (
           <Link key={item.id} href={`/blog/${item.id}`}>
             <BlogPost title={item?.title} />
           </Link>

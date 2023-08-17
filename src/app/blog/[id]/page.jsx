@@ -3,30 +3,28 @@
 import Image from "next/image";
 import img from "/public/images/lawyer-3.jpg";
 import avatar from "/public/images/haturi.png";
-import { redirect } from "next/navigation";
+import loadSingleBlog from "@/utils/loadSingleBlog";
 
-async function getData(id) {
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
-    cache: "no-store",
-  });
+export const generateMetadata = async ({ params }) => {
+  const { title } = await loadSingleBlog(params?.id);
 
-  if (!res.ok) {
-    return redirect("/blog");
-  }
-
-  return res.json();
-}
+  return {
+    title: title,
+  };
+};
 
 const blogPost = async ({ params }) => {
-  const data = await getData(params?.id);
+  const { id, title, body } = await loadSingleBlog(params?.id);
 
   return (
     <div className="md:p-20 p-4">
       <div className="flex md:flex-row flex-col-reverse items-center gap-10 mb-10">
         <div className="flex-1 p-4">
           <div className="space-y-8">
-            <h2 className="text-4xl font-bold">{data?.title}</h2>
-            <p>{data?.body}</p>
+            <h2 className="text-4xl font-bold">
+              {id}. {title}
+            </h2>
+            <p>{body}</p>
           </div>
           <div className="flex items-center gap-10 mt-10">
             <Image
