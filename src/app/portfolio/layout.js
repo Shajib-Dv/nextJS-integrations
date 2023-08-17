@@ -1,7 +1,5 @@
 /** @format */
 
-import React from "react";
-
 const layout = ({ children }) => {
   return (
     <div className="min-h-screen px-10 my-40">

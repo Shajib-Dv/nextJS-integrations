@@ -3,7 +3,7 @@
 import Image from "next/image";
 import img from "/public/images/lawyer-3.jpg";
 import avatar from "/public/images/haturi.png";
-import { notFound } from "next/navigation";
+import { redirect } from "next/navigation";
 
 async function getData(id) {
   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
@@ -11,7 +11,7 @@ async function getData(id) {
   });
 
   if (!res.ok) {
-    return notFound();
+    return redirect("/blog");
   }
 
   return res.json();
