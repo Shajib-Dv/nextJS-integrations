@@ -1,9 +1,22 @@
 /** @format */
 
-import React from "react";
+import getProductByCategory from "@/utils/getProductByCategory";
+import Link from "next/link";
 
-const SingleProductDetails = () => {
-  return <div>SingleProductDetails</div>;
+const ServiceDetails = async ({ searchParams }) => {
+  const category = parseInt(searchParams?.category);
+  const products = await getProductByCategory(category);
+
+  return (
+    <div>
+      {products &&
+        products.map((product) => (
+          <Link href={`/services/product/${product.id}`} key={product.id}>
+            <p>{product.title}</p>
+          </Link>
+        ))}
+    </div>
+  );
 };
 
-export default SingleProductDetails;
+export default ServiceDetails;

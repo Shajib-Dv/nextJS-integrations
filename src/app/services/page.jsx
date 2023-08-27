@@ -11,7 +11,9 @@ const Services = async () => {
       {categories &&
         categories.map((category) => (
           <div key={category.id} className="p-10">
-            <Link href={`/services/${category.id}`}>{category.title}</Link>
+            <Link href={`/services/product?category=${category.id}`}>
+              {category.title}
+            </Link>
           </div>
         ))}
     </div>
