@@ -43,14 +43,14 @@
       "categoryId": 3
     },
     {
-      "id": 5,
+      "id": 6,
       "title": "product 6 | cat4",
       "price": 382,
       "features": ["features 1", "features 2", "features 3", "features 4"],
       "categoryId": 4
     },
     {
-      "id": 5,
+      "id": 7,
       "title": "product 7 | cat5",
       "price": 382,
       "features": ["features 1", "features 2", "features 3", "features 4"],
