@@ -2,8 +2,8 @@
 
 import PageLoading from "@/components/loader/PageLoading";
 
-const loading = () => {
+const RootLoading = () => {
   return <PageLoading />;
 };
 
-export default loading;
+export default RootLoading;
