@@ -1,59 +1,85 @@
 {
   "categories": [
-    { "id": 1, "title": "category 1" },
-    { "id": 2, "title": "category 2" },
-    { "id": 3, "title": "category 3" },
-    { "id": 4, "title": "category 4" },
-    { "id": 5, "title": "category 5" }
+    {
+      "id": 1,
+      "title": "category 1"
+    },
+    {
+      "id": 2,
+      "title": "category 2"
+    },
+    {
+      "id": 3,
+      "title": "category 3"
+    },
+    {
+      "id": 4,
+      "title": "category 4"
+    },
+    {
+      "id": 5,
+      "title": "category 5"
+    }
   ],
   "products": [
     {
       "id": 1,
-      "title": "product 1 | cat1",
-      "price": 382,
-      "features": ["features 1", "features 2", "features 3", "features 4"],
-      "categoryId": 1
-    },
-    {
-      "id": 2,
-      "title": "product 2 | cat1",
-      "price": 332,
-      "features": ["features 1", "features 2", "features 3", "features 4"],
+      "title": "Raijon bmx-2 cat_1",
+      "price": "350.00",
+      "features": [
+        "features 1",
+        "features 2",
+        "features 3",
+        "features 4"
+      ],
       "categoryId": 1
     },
     {
       "id": 3,
       "title": "product 3 | cat2",
       "price": 382,
-      "features": ["features 1", "features 2", "features 3", "features 4"],
-      "categoryId": 2
-    },
-    {
-      "id": 4,
-      "title": "product 4 | cat2",
-      "price": 382,
-      "features": ["features 1", "features 2", "features 3", "features 4"],
+      "features": [
+        "features 1",
+        "features 2",
+        "features 3",
+        "features 4"
+      ],
       "categoryId": 2
     },
     {
       "id": 5,
-      "title": "product 5 | cat3",
-      "price": 382,
-      "features": ["features 1", "features 2", "features 3", "features 4"],
+      "title": "Premium_pol | cat3",
+      "price": "382.00",
+      "features": [
+        "features 1",
+        "features 2",
+        "features 3",
+        "features 4"
+      ],
       "categoryId": 3
     },
     {
       "id": 6,
       "title": "product 6 | cat4",
       "price": 382,
-      "features": ["features 1", "features 2", "features 3", "features 4"],
+      "features": [
+        "features 1",
+        "features 2",
+        "features 3",
+        "features 4"
+      ],
       "categoryId": 4
     },
     {
       "id": 7,
       "title": "product 7 | cat5",
-      "price": 382,
-      "features": ["features 1", "features 2", "features 3", "features 4"],
+      "price": "382.00",
+      "features": [
+        "features 1",
+        "features 2",
+        "features 3",
+        "features 4"
+      ],
       "categoryId": 5
     }
   ]
