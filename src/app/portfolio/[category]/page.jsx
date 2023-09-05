@@ -2,6 +2,11 @@
 
 import Image from "next/image";
 import img from "/public/images/rectangle4.png";
+export const metadata = () => {
+  return {
+    title: "NextRush | portfolio view",
+  };
+};
 const portfolioProject = ({ params }) => {
   return (
     <>

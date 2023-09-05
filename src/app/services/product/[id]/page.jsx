@@ -1,6 +1,12 @@
 /** @format */
 
 import getSingleProductDetailsById from "@/utils/getSingleProductDetailsById";
+export const generateMetadata = async ({ params }) => {
+  const { title } = await getSingleProductDetailsById(params?.id);
+  return {
+    title: `Details ${title}`,
+  };
+};
 
 const SingleProductDetails = async ({ params }) => {
   const { title, price, features } = await getSingleProductDetailsById(

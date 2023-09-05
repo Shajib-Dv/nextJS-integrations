@@ -2,6 +2,13 @@
 
 import Image from "next/image";
 import contactImg from "../../../public/images/lawyer-2.jpg";
+
+export const metadata = () => {
+  return {
+    title: "NextRush | Contacts",
+  };
+};
+
 const contacts = () => {
   return (
     <div className="hero min-h-screen">

@@ -2,9 +2,12 @@
 
 import getCategories from "@/utils/getCategories";
 import Link from "next/link";
-import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-
+export const metadata = () => {
+  return {
+    title: "NextRush | Services",
+  };
+};
 const Services = async () => {
   const categories = await getCategories();
 

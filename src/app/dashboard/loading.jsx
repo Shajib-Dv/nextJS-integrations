@@ -2,8 +2,12 @@
 
 import PageLoading from "@/components/loader/PageLoading";
 
-const loading = () => {
-  return <PageLoading />;
+const DashboardLoading = () => {
+  return (
+    <>
+      <PageLoading />
+    </>
+  );
 };
 
-export default loading;
+export default DashboardLoading;

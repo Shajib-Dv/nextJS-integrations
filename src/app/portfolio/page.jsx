@@ -5,7 +5,11 @@ import Link from "next/link";
 import img1 from "../../../public/images/handcup.png";
 import img2 from "../../../public/images/haturi.png";
 import img3 from "../../../public/images/heard.png";
-
+export const metadata = () => {
+  return {
+    title: "NextRush | Portfolio",
+  };
+};
 const portfolio = () => {
   return (
     <>
