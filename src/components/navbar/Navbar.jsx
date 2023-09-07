@@ -17,14 +17,14 @@ const Navbar = () => {
   return (
     <nav className="flex justify-between items-center text-white bg-[rgb(0,0,0,0.5)] px-10 h-24">
       <div className="text-5xl">
-        <Link href="/" className="text-green-800">
+        <Link href="/" className="text-green-600">
           NextRush
         </Link>
       </div>
       <div className="hidden md:flex gap-6">
         <ThemeChanger />
         {links.map((link) => (
-          <Link key={link.id} href={link.url} className="hover:text-green-700">
+          <Link key={link.id} href={link.url} className="hover:text-green-600">
             {link.title}
           </Link>
         ))}
