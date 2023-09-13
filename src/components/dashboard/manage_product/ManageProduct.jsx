@@ -64,7 +64,7 @@ const ManageProduct = async () => {
 
   return (
     <>
-      <div className="overflow-x-auto w-full">
+      <div className="overflow-x-auto w-screen md:w-full">
         <table className="table md:table-lg">
           {/* head */}
           <thead>
