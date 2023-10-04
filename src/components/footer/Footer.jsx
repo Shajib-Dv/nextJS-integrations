@@ -36,7 +36,7 @@ const Footer = () => {
               className="input input-bordered w-full pr-16"
             />
             <button className="btn btn-neutral absolute top-0 right-0 rounded-l-none">
-              Subscribe
+              Subscribe Now
             </button>
           </div>
         </div>
