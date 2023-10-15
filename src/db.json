@@ -35,8 +35,32 @@
       "categoryId": 1
     },
     {
+      "id": 2,
+      "title": "Raijon bmx-2 cat_2",
+      "price": "350.00",
+      "features": [
+        "features 1",
+        "features 2",
+        "features 3",
+        "features 4"
+      ],
+      "categoryId": 1
+    },
+    {
       "id": 3,
-      "title": "product 3 | cat2",
+      "title": "product Libba_3 | cat_3",
+      "price": "372.00",
+      "features": [
+        "features 1",
+        "features 2",
+        "features 3",
+        "features 4"
+      ],
+      "categoryId": 2
+    },
+    {
+      "id": 4,
+      "title": "product Libba_3 | cat_4",
       "price": "372.00",
       "features": [
         "features 1",
